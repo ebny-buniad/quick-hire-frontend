@@ -1,0 +1,47 @@
+export enum JobLocation {
+  DHAKA = "DHAKA",
+  CHATTOGRAM = "CHATTOGRAM",
+  SYLHET = "SYLHET",
+  KHULNA = "KHULNA",
+  BARISHAL = "BARISHAL",
+  RAJSHAHI = "RAJSHAHI",
+  RANGPUR = "RANGPUR",
+  MYMENSINGH = "MYMENSINGH",
+}
+
+export enum WorkplaceType {
+  REMOTE = "REMOTE",
+  ONSITE = "ONSITE",
+  HYBRID = "HYBRID",
+}
+
+export enum EmploymentType {
+  FULL_TIME = "FULL_TIME",
+  PART_TIME = "PART_TIME",
+  CONTRACT = "CONTRACT",
+  INTERNSHIP = "INTERNSHIP",
+}
+
+export enum ExperienceLevel {
+  JUNIOR = "JUNIOR",
+  MID = "MID",
+  SENIOR = "SENIOR",
+}
+
+export enum Currency {
+  BDT = "BDT",
+  USD = "USD",
+}
+
+export enum JobCategory {
+  SOFTWARE_DEVELOPMENT = "SOFTWARE_DEVELOPMENT",
+  DESIGN = "DESIGN",
+  MARKETING = "MARKETING",
+  SALES = "SALES",
+  HR = "HR",
+  FINANCE = "FINANCE",
+  CUSTOMER_SUPPORT = "CUSTOMER_SUPPORT",
+  DATA_SCIENCE = "DATA_SCIENCE",
+  DEVOPS = "DEVOPS",
+  PRODUCT_MANAGEMENT = "PRODUCT_MANAGEMENT",
+}

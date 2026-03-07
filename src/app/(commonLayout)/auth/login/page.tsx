@@ -14,7 +14,6 @@ const signupSchema = z.object({
   password: z.string().min(8, "Password must be at least 8 characters"),
 });
 
-
 export default function Login() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();

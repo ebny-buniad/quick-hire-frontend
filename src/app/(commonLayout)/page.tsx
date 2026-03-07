@@ -1,6 +1,11 @@
-import Image from "next/image";
+import { getUser } from "../service/user/get.user";
 
-export default function Home() {
+
+export default async function Home() {
+
+  const user = await getUser();
+  console.log("User in home page: -", user)
+
   return (
     <div>
       hello
