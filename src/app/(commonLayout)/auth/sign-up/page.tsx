@@ -3,6 +3,7 @@
 
 import { authClient } from "@/lib/auth-client";
 import { useForm } from "@tanstack/react-form";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -24,7 +25,6 @@ export default function SignUp() {
             email: "",
             password: "",
         },
-
 
         // Account creating by better auth
         onSubmit: async ({ value }) => {
@@ -54,7 +54,6 @@ export default function SignUp() {
         <div className="h-[92vh] flex justify-center items-center">
             <div className="w-96 p-6 shadow-lg rounded-2xl bg-white border border-gray-200">
                 <h2 className="text-2xl font-semibold mb-6">Create Account</h2>
-
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();
@@ -72,14 +71,12 @@ export default function SignUp() {
                         {(field) => (
                             <div>
                                 <label className="block mb-1 font-medium">Name</label>
-
                                 <input
                                     type="text"
                                     className="input input-bordered w-full"
                                     value={field.state.value}
                                     onChange={(e) => field.handleChange(e.target.value)}
                                 />
-
                                 {field.state.meta.errors?.length ? (
                                     <p className="text-red-500 text-sm mt-1">
                                         {field.state.meta.errors[0]?.message}
@@ -99,14 +96,12 @@ export default function SignUp() {
                         {(field) => (
                             <div>
                                 <label className="block mb-1 font-medium">Email</label>
-
                                 <input
                                     type="email"
                                     className="input input-bordered w-full"
                                     value={field.state.value}
                                     onChange={(e) => field.handleChange(e.target.value)}
                                 />
-
                                 {field.state.meta.errors?.length ? (
                                     <p className="text-red-500 text-sm mt-1">
                                         {field.state.meta.errors[0]?.message}
@@ -161,6 +156,8 @@ export default function SignUp() {
                         Login with Google
                     </button>
                 </form>
+                <p className="mt-6 text-[14px] text-center">Already have an account? <Link className="underline text-blue-600" href={`/auth/login`}>Login</Link></p>
+
             </div>
         </div>
     );
