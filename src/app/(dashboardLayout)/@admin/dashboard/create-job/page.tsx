@@ -3,6 +3,7 @@
 import { createJob } from "@/app/actionAPI/jobs.api";
 import { EmploymentType, ExperienceLevel, JobCategory, JobLocation, WorkplaceType, Currency } from "@/enums/enums";
 import { useForm } from "@tanstack/react-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 
@@ -31,8 +32,8 @@ const jobSchema = z.object({
   vacancies: z.coerce.number().min(1),
 
   deadline: z
-  .string()
-  .transform((val) => new Date(val))
+    .string()
+    .transform((val) => new Date(val))
 });
 
 
@@ -65,10 +66,15 @@ export default function CreateJobForm() {
       }
 
       const payload = result.data
-      
+
       try {
-        const result = await createJob(payload);
-        console.log(result)
+        const { data, success, error } = await createJob(payload);
+        if (success) {
+          toast.success("Job created successfully!");
+          form.reset();
+        } else {
+          toast.error(error?.message || "Failed to create job");
+        }
 
       }
       catch (err) {

@@ -5,10 +5,8 @@ import { ICreateJob } from "../interface/job.interface";
 
 const NEXT_PUBLIC = process.env.NEXT_PUBLIC_API_URL;
 
-
 // Create job
 export async function createJob(payload: ICreateJob) {
-    console.log(payload)
     try {
         const cookieStore = await cookies();
         const url = new URL(`${NEXT_PUBLIC}/create-job`);

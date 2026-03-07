@@ -9,7 +9,7 @@ export default function Sidebar() {
     const links = [
         { name: "Dashboard", href: "/dashboard" },
         { name: "Create Jobs", href: "/dashboard/create-job" },
-        { name: "Applications", href: "/dashboard/applications" },
+        { name: "All Jobs", href: "/dashboard/all-jobs" },
         { name: "Profile", href: "/dashboard/profile" },
     ];
 
