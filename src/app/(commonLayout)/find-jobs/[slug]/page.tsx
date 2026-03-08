@@ -1,5 +1,6 @@
 import { getJob } from '@/app/service/jobs/jobs.service';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 
 export default async function JobDetails({ params }: { params: { slug: string } }) {
@@ -75,9 +76,12 @@ export default async function JobDetails({ params }: { params: { slug: string } 
 
             {/* Apply Button */}
             <div className="mt-6">
-                <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">
+                <Link
+                    href={`/find-jobs/${job.slug}/apply?jobId=${job.id}`}
+                    className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
+                >
                     Apply Now
-                </button>
+                </Link>
             </div>
         </div>
     );
