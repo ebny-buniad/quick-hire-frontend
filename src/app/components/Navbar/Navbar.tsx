@@ -56,7 +56,7 @@ function NavLinks() {
     return (
         <ul className="menu menu-horizontal px-1">
             <li>
-                <Link href="/jobs">Find Jobs</Link>
+                <Link href="/find-jobs">Find Jobs</Link>
             </li>
             <li>
                 <Link href="/companies">Browse Companies</Link>
@@ -139,7 +139,7 @@ function MobileMenu({
 
             <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow">
                 <li>
-                    <Link href="/jobs">Find Jobs</Link>
+                    <Link href="/find-jobs">Find Jobs</Link>
                 </li>
                 <li>
                     <Link href="/companies">Browse Companies</Link>

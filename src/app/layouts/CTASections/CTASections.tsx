@@ -4,7 +4,7 @@ import dashboardImg from '../../../assets/dashboard.png'
 
 export default function CTASections() {
     return (
-        <section className="container [clip-path:polygon(200px_0,100%_0,100%_calc(100%-180px),calc(100%-200px)_100%,0_100%,0_180px)]
+        <section className="container [clip-path:polygon(150px_0,100%_0,100%_calc(100%-150px),calc(100%-150px)_100%,0_100%,0_150px)]
          mx-auto relative pt-15  bg-indigo-600 text-white">
             <div className="max-w-7xl mx-auto px-6 md:px-8 py-20 grid md:grid-cols-2 items-center gap-10 relative">
                 <div className="z-10">
