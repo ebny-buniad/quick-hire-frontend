@@ -1,4 +1,5 @@
 import ExploreCategories from "../layouts/Category/Category";
+import CTASections from "../layouts/CTASections/CTASections";
 import Partners from "../layouts/Partners/Partners";
 
 export default async function Home() {
@@ -6,6 +7,8 @@ export default async function Home() {
     <div className="px-2">
       <Partners></Partners>
       <ExploreCategories></ExploreCategories>
+      <CTASections></CTASections>
+      fddsfsdf
     </div>
   );
 }

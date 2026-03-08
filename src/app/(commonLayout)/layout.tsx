@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar/Navbar';
 import { getUser } from '../service/user/get.user';
 import HeroSection from '../layouts/Hero/Hero';
+import Footer from '../components/Footer/Footer';
 
 export default async function commonLayout(
     {
@@ -21,6 +22,7 @@ export default async function commonLayout(
             <main>
                 {children}
             </main>
+            <Footer></Footer>
         </>
     )
 }
