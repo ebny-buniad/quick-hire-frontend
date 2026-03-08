@@ -43,7 +43,7 @@ export default async function DashboardLayout(
 
             <div className="drawer-side border-r border-gray-200">
                 <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
-                <Sidebar />
+                <Sidebar role={userInfo?.role} />
             </div>
         </div>
     );

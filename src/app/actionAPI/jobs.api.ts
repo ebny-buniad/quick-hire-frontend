@@ -32,3 +32,29 @@ export async function createJob(payload: ICreateJob) {
     }
 }
 
+
+// Delete job
+
+export async function deleteJob(id: string) {
+    try {
+        const cookieStore = await cookies();
+        const url = new URL(`${NEXT_PUBLIC}/jobs/${id}`);
+        const res = await fetch(url.toString(), {
+            method: "DELETE",
+            headers: {
+                cookie: cookieStore.toString(),
+            },
+            credentials: "include"
+        });
+        const result = await res.json();
+        return {
+            data: result,
+            success: true,
+            error: null
+        };
+    }
+    catch (err) {
+        console.error(err);
+        return { data: null, error: { message: "Something Went Wrong" } };
+    }
+}

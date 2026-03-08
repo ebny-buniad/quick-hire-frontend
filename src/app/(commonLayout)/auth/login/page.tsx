@@ -27,7 +27,6 @@ export default function Login() {
     onSubmit: async ({ value }) => {
       const result = signupSchema.safeParse(value);
       if (!result.success) return;
-      console.log(result.data)
       setLoading(true);
       try {
         const { data, error } = await authClient.signIn.email(result.data);
