@@ -51,7 +51,24 @@ export async function getAllJobs(
     }
 }
 
-// Get single job
+// Get single job details
+
+export async function getJob(slug: string) {
+    try {
+        const url = new URL(`${NEXT_PUBLIC}/jobs/${slug}`);
+        const res = await fetch(url.toString());
+        const result = await res.json();
+        return {
+            data: result,
+            success: true,
+            error: null
+        };
+    }
+    catch (err) {
+        console.error(err);
+        return { data: null, error: { message: "Something Went Wrong" } };
+    }
+}
 
 
 

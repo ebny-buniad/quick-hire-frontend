@@ -84,7 +84,7 @@ export default async function Jobs({
             <div className="mt-auto pt-5 border-t border-gray-200">
               <div className="flex items-center justify-between">
                 <Link
-                  href={`/jobs/${job.slug}`}
+                  href={`/find-jobs/${job.slug}`}
                   className="text-sm font-medium bg-blue-600 px-4 py-2 rounded-full text-white hover:underline"
                 >
                   Details
