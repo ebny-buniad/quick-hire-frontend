@@ -3,26 +3,23 @@ import Image from 'next/image';
 import React from 'react'
 
 export default async function JobDetails({ params }: { params: { slug: string } }) {
-
     const { slug } = await params;
     // Fetch data
-
     const data = await getJob(slug);
-    console.log(data.data.data)
-    const job = data.data.data
+    const job = data?.data?.data
 
     return (
-        <div className="max-w-4xl mx-auto p-6 shadow rounded-2xl border border-gray-200">
+        <div className="max-w-4xl mx-auto p-6 shadow rounded-2xl border border-gray-200 mt-10">
             {/* Job Header */}
             <div className="flex items-center gap-4 mb-6">
-                <div className='border w-20 h-20 flex items-center justify-center rounded-xl'>
+                <div className='border border-gray-200 w-20 h-20 flex items-center justify-center rounded-xl'>
                     <Image
-                    src={job.company_logo}
-                    width={30}
-                    height={20}
-                    alt="logo"
+                        src={job.company_logo}
+                        width={30}
+                        height={20}
+                        alt="logo"
                     >
-                </Image>
+                    </Image>
                 </div>
                 <div>
                     <h1 className="text-2xl font-bold">{job.title}</h1>

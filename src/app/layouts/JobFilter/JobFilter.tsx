@@ -26,14 +26,14 @@ export default function JobFilters() {
     }
 
     return (
-        <div className="bg-white  rounded-xl shadow-sm container mx-auto border border-gray-200 p-3 mt-10">
+        <div className="bg-white  rounded-xl shadow-sm  border border-gray-200 p-3">
 
             {/* Filters */}
-            <div className="grid md:grid-cols-5 gap-4 items-center justify-center">
+            <div className="grid gap-4">
 
                 {/* Search */}
                 <div>
-                    <label className="input">
+                    <label className="input w-full">
                         <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <g
                                 strokeLinejoin="round"
@@ -58,7 +58,7 @@ export default function JobFilters() {
                     <select
                         value={employmentType}
                         onChange={(e) => setEmploymentType(e.target.value)}
-                        className=" select rounded-lg p-2"
+                        className=" select rounded-lg p-2 w-full"
                     >
                         <option value="">Employment Type</option>
                         <option value="FULL_TIME">Full Time</option>
@@ -73,7 +73,7 @@ export default function JobFilters() {
                     <select
                         value={workplaceType}
                         onChange={(e) => setWorkplaceType(e.target.value)}
-                        className="border select rounded-lg p-2"
+                        className="border select rounded-lg p-2 w-full"
                     >
                         <option value="">Workplace Type</option>
                         <option value="REMOTE">Remote</option>
@@ -87,7 +87,7 @@ export default function JobFilters() {
                     <select
                         value={experienceLevel}
                         onChange={(e) => setExperienceLevel(e.target.value)}
-                        className="border select rounded-lg p-2"
+                        className="border select rounded-lg p-2 w-full"
                     >
                         <option value="">Experience Level</option>
                         <option value="JUNIOR">Junior</option>
@@ -97,7 +97,7 @@ export default function JobFilters() {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex justify-end gap-2">
+                <div className="flex  gap-2">
                     <button
                         onClick={applyFilters}
                         className="bg-indigo-600 text-white btn px-6 py-2 rounded-lg hover:bg-indigo-700 transition"
