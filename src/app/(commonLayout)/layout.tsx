@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar';
 import { getUser } from '../service/user/get.user';
+import HeroSection from '../layouts/Hero/Hero';
 
 export default async function commonLayout(
     {
@@ -12,10 +13,14 @@ export default async function commonLayout(
 
     const user = await getUser();
     return (
-        <div>
-            <Navbar user={user}></Navbar>
-            {children}
-            
+        <>
+            <div className="bg-[url('../assets/hero-bg.png')] bg-no-repeat bg-bottom-left md:bg-top-right bg-contain">
+                <Navbar user={user}></Navbar>
+                <HeroSection></HeroSection>
             </div>
+            <main>
+                {children}
+            </main>
+        </>
     )
 }

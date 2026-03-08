@@ -1,14 +1,11 @@
-import { getUser } from "../service/user/get.user";
-
+import ExploreCategories from "../layouts/Category/Category";
+import Partners from "../layouts/Partners/Partners";
 
 export default async function Home() {
-
-  const user = await getUser();
-  console.log("User in home page: -", user)
-
   return (
-    <div>
-      hello
+    <div className="px-2">
+      <Partners></Partners>
+      <ExploreCategories></ExploreCategories>
     </div>
   );
 }
